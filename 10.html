@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: REPRESENTANTE DE SALA
+    Peça para o programa perguntar ao professor regente o nome dos três candidatos a representante da sala.
+    Peça também para o programa perguntar ao professor regente a quantidade de alunos votantes.
+    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada candidato a representante de sala.
+    */
+
+    //ENTRADA
+    const cUm = prompt(`Insira o nome do c um`);
+    const cDois= prompt(`Insira o nome do c dois`);
+    const cTres = prompt(`Insira o nome do c três`);
+    const alunosVotantes = Number(prompt(`Insira o número de alunos na sala que irão votar:`));
+    let votosCand1 = 0;
+    let votosCand2 = 0;
+    let votosCand3 = 0;
+    //PROCESSAMENTO
+    for (i = 1; i <= alunosVotantes; i++) {
+        let voto = Number(prompt(`Insira o número do candidato que você deseja votar: 
+        Candidato ${cUm} (1)   Candidato ${cDois} (2)    Candidato ${cTres} (3)`));
+
+        if (voto == 1) {
+            votosC1++
+        } else if (voto == 2) {
+            votosC2++
+        } else {
+            votosC3++
+        }
+    }
+
+    //SAÍDA
+    document.write(`Votos no total: ${alunosVotantes}<br>
+     Votos no candidato ${cUm}: ${votosCand1} (${votosCand1*100/alunosVotantes}%)<br>
+     Votos no candidato ${cDois}: ${votosCand2} (${votosCand2*100/alunosVotantes}%)<br>
+     Votos no candidato ${cTres}: ${votosCand3} (${votosCand3*100/alunosVotantes}%)`)
+</script>

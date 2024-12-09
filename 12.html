@@ -1,0 +1,26 @@
+<script>
+    /*
+    PROBLEMA: INVESTIMENTOS
+    Joãozinho investiu R$ 1.000,00 e o investimento renderá 2% por dia útil. Quantos dias demorará para que Joãozinho consiga o total de R$ 2.000,00.
+    */
+
+    //ENTRADA
+    let investimentoI = 1000.00;
+    const meta = 2000.00;
+    const haddad = 0.02;
+    let dias = 0;
+    let diaAtual = 1;
+    let fds = 0; 
+
+    //PROCESSAMENTO
+    for( item = 1000; investimentoI <= meta; dias++){
+    diaAtual = (diaAtual + 1) % 7
+
+    if(diaAtual == 0 || diaAtual == 6){
+    fds = fds + 1
+    } else {
+       investimentoI += (investimentoI*haddad);
+   }
+  }
+  document.write(`Dias totais: ${dias} <br> Dias não úteis: ${fds}<br> Dias úteis: ${dias - fds}`)
+</script>
